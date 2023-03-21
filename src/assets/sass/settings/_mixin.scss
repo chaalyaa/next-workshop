@@ -1,0 +1,30 @@
+@mixin defaultButton{
+    background:red;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@mixin blockEl($block:'',$element:''){
+    .#{$block}{
+        &-#{$element}{
+            // @extend %defaultButton
+            @content
+        }
+    }
+}
+
+@include blockEl('btn', 'danger'){
+    @include defaultButton;
+    background: red;
+}
+
+@include blockEl('btn', 'primary'){
+    @include defaultButton;
+    background: green;
+}
+
+@include blockEl('btn', 'warning'){
+    @include defaultButton;
+    background: yellow;
+}

@@ -1,0 +1,23 @@
+.btn{
+    // Note: Standarized naming class for modifier & class styling, for example on this modle '-' is for styling element, '--' for modifier
+    &-danger {
+        background: #e55959;
+
+        .visible{
+            background: blue !important;
+        }
+    }
+
+    &-success {
+        background: #64e686;
+    }
+
+    &--visible {
+        display: block;
+    }
+
+    &--hidden {
+        display: none;
+    }
+
+}
